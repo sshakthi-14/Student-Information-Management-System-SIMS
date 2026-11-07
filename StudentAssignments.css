@@ -1,0 +1,65 @@
+.assignment-header {
+    background: #E8156A;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.course-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.assignment-menu {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-btn {
+    border: none;
+    padding: 10px 15px;
+    background: #eeeeee;
+    border-radius: 6px;
+}
+
+    .menu-btn:hover {
+        background: #dddddd;
+    }
+
+.student-box {
+    width: 95%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 5px solid #E8156A;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.student-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.assignment-table-wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+    .assignment-table-wrapper table {
+        width: 100%;
+    }
+
+    .assignment-table-wrapper th,
+    .assignment-table-wrapper td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+#lblMessage {
+    margin-left: 40px;
+    font-weight: bold;
+}
