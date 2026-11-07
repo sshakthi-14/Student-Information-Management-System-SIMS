@@ -1,0 +1,59 @@
+.attendance-header {
+    background: #B7D683;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.course-header {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.attendance-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #eeeeee;
+}
+
+    .menu-btn:hover {
+        background: #dfeec6; 
+    }
+
+.active-btn {
+    background: #B7D683;
+    color: white;
+}
+
+#gvStudents {
+    width: 100%;
+    background: white;
+}
+
+table {
+    width: 100%;
+}
+
+    table th,
+    table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+.attendance-dropdown {
+    width: 120px;
+}
+
+.attendance-container {
+    width: 90%;
+    margin: auto;
+}
