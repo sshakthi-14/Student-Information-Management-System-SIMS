@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.marks-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Marks Header */
+.marks-header {
+    background: #76B2F5;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.course-header {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+}
+
+.report-title-sub {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Navigation Bar */
+.marks-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.menu-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #eeeeee;
+    text-decoration: none;
+    color: black;
+    transition: background 0.2s ease;
+}
+
+    .menu-btn:hover {
+        background: #AEC8E6;
+        color: black;
+    }
+
+.active-btn {
+    background: #76B2F5;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Student Information Block Layout */
+.student-meta-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #76B2F5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-size: 14px;
+}
+
+/* Summary Panel Calculation View Box */
+.summary-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #dee2e6;
+    font-size: 14px;
+}
+
+/* Report Table */
+.report-grid {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+}
+
+    table th.grid-header {
+        background-color: #f8f9fa !important;
+        color: #333 !important;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    table td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+    }
