@@ -1,0 +1,47 @@
+.marks-header {
+    background: #EDC36F;
+    padding: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.course-header {
+    font-size: 24px;
+}
+
+.marks-menu {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-btn {
+    border: none;
+    padding: 10px 15px;
+    background: #eee;
+    border-radius: 6px;
+}
+
+    .menu-btn:hover {
+        background: #F5DCB0;
+    }
+
+.active-btn {
+    background: #EDC36F;
+    color: white;
+}
+
+.marks-table-wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+    .marks-table-wrapper .table td,
+    .marks-table-wrapper .table th {
+        vertical-align: middle;
+        text-align: center;
+    }
