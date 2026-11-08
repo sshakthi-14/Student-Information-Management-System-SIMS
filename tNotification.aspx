@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tNotification.aspx.cs" Inherits="SoftwareEngineeringProject.Notifications" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tNotification.aspx.cs" Inherits="Student_Information_Management_System_SIMS.Notifications" %>
 
 <!DOCTYPE html>
 <html>

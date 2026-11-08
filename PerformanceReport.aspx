@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PerformanceReport.aspx.cs" Inherits="SoftwareEngineeringProject.PerformanceReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PerformanceReport.aspx.cs" Inherits="Student_Information_Management_System_SIMS.PerformanceReport" %>
 
 <!DOCTYPE html>
 <html>
