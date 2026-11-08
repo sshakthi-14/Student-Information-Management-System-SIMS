@@ -1,0 +1,5 @@
+<connectionStrings>
+  <add name="CollegeManagementSystem"
+       connectionString="Server=(localdb)\MSSQLLocalDB;Database=CollegeManagementSystem;Trusted_Connection=True;"
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
