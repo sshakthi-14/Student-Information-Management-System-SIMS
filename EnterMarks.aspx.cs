@@ -122,8 +122,8 @@ namespace Student_Information_Management_System_SIMS
                     decimal assignment = 0;
                     string assignmentQuery =
                         @"SELECT ISNULL(SUM(Marks),0) 
-                        FROM AssignmentSubmissions 
-                        WHERE EnrollmentID = @EnrollmentID";
+                FROM AssignmentSubmissions 
+                WHERE EnrollmentID = @EnrollmentID";
 
                     SqlCommand assignmentCmd =
                         new SqlCommand(assignmentQuery, conn);
@@ -190,6 +190,32 @@ namespace Student_Information_Management_System_SIMS
                         grade = "F";
                         gradePoint = 0.00m;
                     }
+
+                    // Save or update the results in the database
+                    string upsertQuery = @"
+                IF EXISTS (SELECT 1 FROM Results WHERE EnrollmentID = @EnrollmentID)
+                    UPDATE Results
+                    SET AssignmentMarks = @AssignmentMarks,
+                        MidTestMarks = @MidTestMarks,
+                        FinalExamMarks = @FinalExamMarks,
+                        TotalMarks = @TotalMarks,
+                        Grade = @Grade,
+                        GradePoint = @GradePoint
+                    WHERE EnrollmentID = @EnrollmentID
+                ELSE
+                    INSERT INTO Results (EnrollmentID, AssignmentMarks, MidTestMarks, FinalExamMarks, TotalMarks, Grade, GradePoint)
+                    VALUES (@EnrollmentID, @AssignmentMarks, @MidTestMarks, @FinalExamMarks, @TotalMarks, @Grade, @GradePoint)";
+
+                    SqlCommand upsertCmd = new SqlCommand(upsertQuery, conn);
+                    upsertCmd.Parameters.AddWithValue("@EnrollmentID", enrollmentID);
+                    upsertCmd.Parameters.AddWithValue("@AssignmentMarks", assignment);
+                    upsertCmd.Parameters.AddWithValue("@MidTestMarks", midTest);
+                    upsertCmd.Parameters.AddWithValue("@FinalExamMarks", finalExam);
+                    upsertCmd.Parameters.AddWithValue("@TotalMarks", totalMarks);
+                    upsertCmd.Parameters.AddWithValue("@Grade", grade);
+                    upsertCmd.Parameters.AddWithValue("@GradePoint", gradePoint);
+
+                    upsertCmd.ExecuteNonQuery();
                 }
 
                 lblMessage.Text = "Marks saved successfully.";
