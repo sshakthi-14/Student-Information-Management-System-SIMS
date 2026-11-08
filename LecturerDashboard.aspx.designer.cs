@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareEngineeringProject
+namespace Student_Information_Management_System_SIMS
 {
 
 
@@ -76,6 +76,33 @@ namespace SoftwareEngineeringProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkMarksReport;
+
+        /// <summary>
+        /// lnkCourseNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkCourseNotes;
+
+        /// <summary>
+        /// lnkAnnouncements control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkAnnouncements;
+
+        /// <summary>
+        /// lnkViewAnnouncements control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkViewAnnouncements;
 
         /// <summary>
         /// pnlCourses control.
@@ -203,4 +230,3 @@ namespace SoftwareEngineeringProject
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
     }
-}
