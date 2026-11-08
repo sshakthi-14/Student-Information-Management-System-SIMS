@@ -132,6 +132,8 @@ namespace Student_Information_Management_System_SIMS
             }
 
             DateTime attendanceDate = Convert.ToDateTime(txtDate.Text);
+            int currentCourseID = Convert.ToInt32(Session["SelectedCourseID"]);
+            string courseName = lblCourse.Text;
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
