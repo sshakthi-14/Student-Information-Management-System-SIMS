@@ -7,7 +7,7 @@ namespace Student_Information_Management_System_SIMS
     public partial class StudentLogin : System.Web.UI.Page
     {
         // Add the connection string here. Adjust the value as needed for your environment.
-        private readonly string connStr = "YourConnectionStringHere";
+        private readonly string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=SIMS;Integrated Security=True;";
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
