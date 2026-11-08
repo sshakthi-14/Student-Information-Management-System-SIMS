@@ -74,8 +74,8 @@ namespace Student_Information_Management_System_SIMS
 
                 // 1. Check any duplicates
                 string checkQuery = 
-                    “SELECT COUNT(*) FROM Enrollments” +
-                    “WHERE StudentID=@StudentID AND CourseID=@CourseID";
+                    "SELECT COUNT(*) FROM Enrollments" +
+                    "WHERE StudentID=@StudentID AND CourseID=@CourseID";
                 SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
                 checkCmd.Parameters.AddWithValue("@StudentID", studentID);
                 checkCmd.Parameters.AddWithValue("@CourseID", courseID);
