@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Web.UI.WebControls;
 
-namespace SoftwareEngineeringProject
+namespace Student_Information_Management_System_SIMS
 {
     public partial class CourseNotes : System.Web.UI.Page
     {
