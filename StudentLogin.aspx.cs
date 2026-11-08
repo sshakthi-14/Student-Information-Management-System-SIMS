@@ -1,6 +1,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Configuration;
+using BCrypt.Net;
 
 namespace Student_Information_Management_System_SIMS
 {
@@ -22,7 +23,7 @@ namespace Student_Information_Management_System_SIMS
                 if (dr.Read())
                 {
                     string storedHash = dr["PasswordHash"].ToString();
-                    if (BCrypt.Net.BCrypt.Verify(txtPassword.Text, storedHash))
+                    if (BCrypt.Verify(txtPassword.Text, storedHash))
                     {
                         Session["UserID"] = dr["UserID"];
                         Session["RoleID"] = dr["RoleID"];
