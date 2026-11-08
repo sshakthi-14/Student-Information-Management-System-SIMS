@@ -1,7 +1,7 @@
 using System;
 using System.Data.SqlClient;
 
-namespace SoftwareEngineeringProject
+namespace Student_Information_Management_System_SIMS
 {
     public partial class Login : System.Web.UI.Page
     {
