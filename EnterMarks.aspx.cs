@@ -99,7 +99,7 @@ namespace Student_Information_Management_System_SIMS
             }
         }
 
-        protected void gvStudents_RowCommand(object sender,GridViewCommandEventArgs e)
+        protected void gvStudents_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "ViewAssignments")
             {
@@ -111,80 +111,90 @@ namespace Student_Information_Management_System_SIMS
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-    	using (SqlConnection conn = new SqlConnection(connStr))
-    	{
-        		conn.Open();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
 
-        		foreach (GridViewRow row in gvStudents.Rows)
-        		{
-            		int enrollmentID = Convert.ToInt32(gvStudents.DataKeys[row.RowIndex].Value);
+                foreach (GridViewRow row in gvStudents.Rows)
+                {
+                    int enrollmentID = Convert.ToInt32(gvStudents.DataKeys[row.RowIndex].Value);
 
-            		decimal assignment = 0;
-            		string assignmentQuery = 
-				@"SELECT ISNULL(SUM(Marks),0) 
-				FROM AssignmentSubmissions 
-				WHERE EnrollmentID = @EnrollmentID";
+                    decimal assignment = 0;
+                    string assignmentQuery =
+                        @"SELECT ISNULL(SUM(Marks),0) 
+                        FROM AssignmentSubmissions 
+                        WHERE EnrollmentID = @EnrollmentID";
 
+                    SqlCommand assignmentCmd =
+                        new SqlCommand(assignmentQuery, conn);
 
-            		SqlCommand assignmentCmd = 
-				new SqlCommand(assignmentQuery, conn);
+                    assignmentCmd.Parameters.AddWithValue("@EnrollmentID", enrollmentID);
+                    assignment = Convert.ToDecimal(assignmentCmd.ExecuteScalar());
 
-            		assignmentCmd.Parameters.AddWithValue("@EnrollmentID", enrollmentID);
-            		assignment = Convert.ToDecimal(assignmentCmd.ExecuteScalar());
+                    decimal midTest = 0;
+                    TextBox txtMid = (TextBox)row.FindControl("txtMidTest");
 
-            		decimal midTest = 0;
-            		TextBox txtMid = (TextBox)row.FindControl("txtMidTest");
-            		
-if (!string.IsNullOrWhiteSpace(txtMid.Text))
-            		{
-                			if (!decimal.TryParse(txtMid.Text, out midTest) || midTest < 0 || midTest > 100)
-                			{
-                    				lblMessage.Text = "Mid Test must be a number between 0 and 100 (row " + (row.RowIndex + 1) + ").";
-                    				lblMessage.ForeColor = System.Drawing.Color.Red;
+                    if (!string.IsNullOrWhiteSpace(txtMid.Text))
+                    {
+                        if (!decimal.TryParse(txtMid.Text, out midTest) || midTest < 0 || midTest > 100)
+                        {
+                            lblMessage.Text = "Mid Test must be a number between 0 and 100 (row " + (row.RowIndex + 1) + ").";
+                            lblMessage.ForeColor = System.Drawing.Color.Red;
+                            return;
+                        }
+                    }
 
-                    				return;
-                			}
-            		}
+                    decimal finalExam = 0;
+                    TextBox txtFinal = (TextBox)row.FindControl("txtFinalExam");
 
-            		decimal finalExam = 0;
-            		TextBox txtFinal = (TextBox)row.FindControl("txtFinalExam");
+                    if (!string.IsNullOrWhiteSpace(txtFinal.Text))
+                    {
+                        if (!decimal.TryParse(txtFinal.Text, out finalExam) || finalExam < 0 || finalExam > 100)
+                        {
+                            lblMessage.Text = "Final Exam must be a number between 0 and 100 (row " + (row.RowIndex + 1) + ").";
+                            lblMessage.ForeColor = System.Drawing.Color.Red;
+                            return;
+                        }
+                    }
 
-            		if (!string.IsNullOrWhiteSpace(txtFinal.Text))
-            		{
-                			if (!decimal.TryParse(txtFinal.Text, out finalExam) || finalExam < 0 || finalExam > 100)
-                			{
-                    				lblMessage.Text = "Final Exam must be a number between 0 and 100 (row " + (row.RowIndex + 1) + ").";
-                    				lblMessage.ForeColor = System.Drawing.Color.Red;
-                    				return;
-                			}
-            		}
+                    decimal weightedAssignment = (assignment / 100m) * 20m;
+                    decimal weightedMidTest = (midTest / 100m) * 30m;
+                    decimal weightedFinalExam = (finalExam / 100m) * 50m;
+                    decimal totalMarks = weightedAssignment + weightedMidTest + weightedFinalExam;
 
-            		decimal weightedAssignment = (assignment / 100m) * 20m;
-            		decimal weightedMidTest = (midTest / 100m) * 30m;
-            		decimal weightedFinalExam = (finalExam / 100m) * 50m;
-            		decimal totalMarks = weightedAssignment + weightedMidTest + weightedFinalExam;
+                    string grade;
+                    decimal gradePoint;
 
-            		string grade;
-            		decimal gradePoint;
+                    if (totalMarks >= 80)
+                    {
+                        grade = "A";
+                        gradePoint = 4.00m;
+                    }
+                    else if (totalMarks >= 70)
+                    {
+                        grade = "B";
+                        gradePoint = 3.00m;
+                    }
+                    else if (totalMarks >= 60)
+                    {
+                        grade = "C";
+                        gradePoint = 2.00m;
+                    }
+                    else if (totalMarks >= 50)
+                    {
+                        grade = "D";
+                        gradePoint = 1.00m;
+                    }
+                    else
+                    {
+                        grade = "F";
+                        gradePoint = 0.00m;
+                    }
+                }
 
-            		if (totalMarks >= 80) 
-{ grade = "A"; 
-gradePoint = 4.00m; }
-            		else if (totalMarks >= 70) 
-{ grade = "B"; 
-gradePoint = 3.00m; }
-            		else if (totalMarks >= 60) 
-{ grade = "C"; 
-gradePoint = 2.00m; }
-            		else if (totalMarks >= 50) 
-{ grade = "D"; 
-gradePoint = 1.00m; }
-            		else 
-{ grade = "F"; 
-gradePoint = 0.00m; }
-		}
-
-        lblMessage.Text = "Marks saved successfully.";
-        lblMessage.ForeColor = System.Drawing.Color.Green;
+                lblMessage.Text = "Marks saved successfully.";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
+            }
+        }
     }
 }
