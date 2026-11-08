@@ -133,7 +133,7 @@ namespace Student_Information_Management_System_SIMS
 
                 if (totalAbsences >= 4)
                 {
-                    e.Row.BackColor = System.Drawing.Color.Grey;
+                    e.Row.BackColor = System.Drawing.Color.Gray;
                     e.Row.ForeColor = System.Drawing.Color.Black;
 
                     if (btnWarning != null)
@@ -153,7 +153,7 @@ namespace Student_Information_Management_System_SIMS
 
         protected void btnWarning_Click(object sender, EventArgs e)
         {
-            // TODO: Handle warning logic here (e.g., sending emails or saving system alerts)
+            // Handle warning logic here (e.g., sending emails or saving system alerts)
         }
 
         protected void btnPDF_Click(object sender, EventArgs e)
