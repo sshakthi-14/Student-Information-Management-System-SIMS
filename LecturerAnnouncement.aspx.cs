@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 
-namespace SoftwareEngineeringProject
+namespace Student_Information_Management_System_SIMS
 {
     public partial class LecturerAnnouncement : System.Web.UI.Page
     {
