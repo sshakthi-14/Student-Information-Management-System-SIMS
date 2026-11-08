@@ -177,15 +177,3 @@ namespace Student_Information_Management_System_SIMS
         }
     }
 }
-
-                <h5 class="mb-3 text-secondary">Academic Status Result</h5>
-                <p class="mb-3 fs-5"><asp:Label ID="lblAcademicStanding" runat="server" /></p>
-                
-                <p class="mb-1 text-dark">CREDIT HOURS EARNED = <asp:Label ID="lblTermCredits" runat="server" Text="0" /></p>
-                <p class="mb-0 text-dark">GRADE POINT AVERAGE (GPA) = <asp:Label ID="lblTermGPA" runat="server" Text="0.00" /></p>
-            </div>
-
-        </div>
-    </form>
-</body>
-</html>
