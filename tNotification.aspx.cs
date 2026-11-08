@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace SoftwareEngineeringProject
+namespace Student_Information_Management_System_SIMS
 {
     public partial class Notifications : System.Web.UI.Page
     {
