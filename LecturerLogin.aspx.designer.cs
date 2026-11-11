@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CollegeManagementSystem
+namespace Student_Information_Management_System_SIMS
 {
 
 
-    public partial class Login
+    public partial class LecturerLogin
     {
 
         /// <summary>
