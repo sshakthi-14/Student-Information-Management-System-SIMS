@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturerLogin.aspx.cs" Inherits="Student_Information_Management_System_SIMS.Login" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturerLogin.aspx.cs" Inherits="Student_Information_Management_System_SIMS.LecturerLogin" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
