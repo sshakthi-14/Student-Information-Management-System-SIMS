@@ -5,8 +5,6 @@ namespace Student_Information_Management_System_SIMS
 {
     public partial class Login : System.Web.UI.Page
     {
-        // Add declarations for server controls referenced in code-behind.
-        // These are normally generated in the designer file; adding them here fixes CS0103 when the designer is missing or not generated.
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
         protected global::System.Web.UI.WebControls.Label lblMessage;
