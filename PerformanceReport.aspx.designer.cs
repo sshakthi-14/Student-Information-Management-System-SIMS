@@ -132,3 +132,4 @@ namespace Student_Information_Management_System_SIMS
         protected global::System.Web.UI.WebControls.Label lblTermGPA;
     }
 }
+
