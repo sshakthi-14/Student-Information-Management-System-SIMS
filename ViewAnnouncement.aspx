@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAnnouncements.aspx.cs" Inherits="SoftwareEngineeringProject.ViewAnnouncements" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAnnouncements.aspx.cs" Inherits="Student_Information_Management_System_SIMS.ViewAnnouncements" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
