@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseNotes.aspx.cs" Inherits="SoftwareEngineeringProject.CourseNotes" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseNotes.aspx.cs" Inherits="Student_Information_Management_System_SIMS.CourseNotes" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
