@@ -230,3 +230,4 @@ namespace Student_Information_Management_System_SIMS
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
     }
+}
