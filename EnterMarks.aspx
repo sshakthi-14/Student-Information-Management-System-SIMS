@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EnterMarks.aspx.cs" Inherits="SoftwareEngineeringProject.EnterMarks" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EnterMarks.aspx.cs" Inherits="Student_Information_Management_System_SIMS.EnterMarks" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
