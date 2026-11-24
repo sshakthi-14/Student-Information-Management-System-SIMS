@@ -11,7 +11,7 @@ namespace Student_Information_Management_System_SIMS
 {
 
 
-    public partial class Notifications
+    public partial class tNotification
     {
 
         /// <summary>
