@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Student_Information_Management_System_SIMS
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class LecturerLogin : System.Web.UI.Page
     {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
