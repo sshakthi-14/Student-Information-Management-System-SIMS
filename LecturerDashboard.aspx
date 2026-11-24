@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturerDashboard.aspx.cs" Inherits="SoftwareEngineeringProject.LecturerDashboard" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturerDashboard.aspx.cs" Inherits="Student_Information_Management_System_SIMS.LecturerDashboard" %>
 
 <!DOCTYPE html>
 
