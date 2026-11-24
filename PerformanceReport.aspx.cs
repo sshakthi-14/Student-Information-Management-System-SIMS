@@ -1,7 +1,9 @@
 using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
+using System.Diagnostics;
+using System.Drawing;
 
 namespace Student_Information_Management_System_SIMS
 {
