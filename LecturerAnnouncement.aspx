@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturerAnnouncement.aspx.cs" Inherits="SoftwareEngineeringProject.LecturerAnnouncement" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturerAnnouncement.aspx.cs" Inherits="Student_Information_Management_System_SIMS.LecturerAnnouncement" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
